@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <img src="img/images.jpg" alt="Logo" />
+        <div class="nav-links">
+          <a href="index.html">Inicio</a>
+        </div>
+      </nav>
+    </header>
+    <section id="contacto" class="contacto">
+      <h2>Llena el siguiente formulario</h2>
+
+      <form action="procesar.php" method="post" enctype="multipart/form-data">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label>Selecciona tu(s) sucursal(es) más cercana(s):</label>
+        <div class="checkbox-group">
+          <label>
+            <input
+              type="checkbox"
+              name="sucursales[]"
+              value="Sucursal Recoleta - Peña 2800"
+            />
+            Sucursal Recoleta - Peña 2800
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="sucursales[]"
+              value="Sucursal Almagro - Salguero 430"
+            />
+            Sucursal Almagro - Salguero 430
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="sucursales[]"
+              value="Sucursal Recoleta - Santa Fe 2712"
+            />
+            Sucursal Recoleta - Santa Fe 2712
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="sucursales[]"
+              value="Sucursal Villa Crespo - Vera"
+            />
+            Sucursal Villa Crespo - Vera
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="sucursales[]"
+              value="Sucursal Recoleta - Vidth"
+            />
+            Sucursal Recoleta - Vidth
+          </label>
+        </div>
+
+        <label for="cv">Adjunta tu CV (PDF):</label>
+        <input
+          type="file"
+          id="cv"
+          name="cv"
+          accept="application/pdf"
+          required
+        />
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </body>
+</html>
